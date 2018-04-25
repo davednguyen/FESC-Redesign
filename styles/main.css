@@ -38,3 +38,12 @@ li a {
 li a:hover {
     background-color: dimgrey;
 }
+
+.mainSection{
+    text-align: center;
+    align-items: center;
+}
+
+table {
+    text-align: center;
+}
