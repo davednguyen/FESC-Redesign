@@ -5,11 +5,13 @@ h1 {
   padding-left: 31%; }
 
 .flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap; }
+  flex-wrap: nowrap;
+  grid-auto-flow: row;
+  align-items: center; }
+  .flex-container img {
+    width: 150px;
+    height: 150px; }
 
 img {
   height: 13rem; }
@@ -36,9 +38,7 @@ li a:hover {
 
 .mainSection {
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  align-items: center; }
 
 table {
   text-align: center; }
