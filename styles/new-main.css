@@ -2,16 +2,18 @@ h1 {
   text-align: center; }
 
 .document {
-  padding-left: 31%; }
+  margin-right: 20px; }
 
 .flex-container {
   display: flex;
   flex-wrap: nowrap;
   grid-auto-flow: row;
-  align-items: center; }
+  align-items: center;
+  margin-left: 10px; }
   .flex-container img {
     width: 150px;
-    height: 150px; }
+    height: 150px;
+    margin-left: 10px; }
 
 img {
   height: 13rem; }
@@ -78,7 +80,10 @@ table {
 
 .mainpage {
   background-color: #0092ff;
-  color: white; }
+  color: white;
+  text-align: center; }
+  .mainpage p {
+    text-align: left; }
 
 .aboutpage {
   background-color: #ffc41a;
@@ -87,5 +92,16 @@ table {
 .industrypage {
   background-color: #75bd3f;
   color: white; }
+
+.main-content {
+  font-size: 1.5rem; }
+
+.designTable tr th {
+  background-color: #0092ff;
+  margin-left: 10px; }
+  .designTable tr th a img {
+    width: 170px;
+    height: 170px;
+    margin-left: 10px; }
 
 /*# sourceMappingURL=new-main.css.map */

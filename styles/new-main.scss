@@ -8,6 +8,7 @@ $menu-background3:#75bd3f;
 $menu-background4:#ff7b0f;
 $menu-background5:#ea4335;
 $menu-background6:#7d4297;
+$main-font-size:1.5rem;
 //mixins
 @mixin hoverColorChange() {
     background-color: $main-background;
@@ -31,7 +32,7 @@ h1 {
 }
 
 .document {
-    padding-left: 31%;
+    margin-right: 20px;
 }
 
 .flex-container {
@@ -39,9 +40,11 @@ h1 {
     flex-wrap: nowrap; 
     grid-auto-flow: row; 
     align-items: center;
+    margin-left: 10px;
     img{
         width: 150px;
         height: 150px;
+        margin-left: 10px;
     } 
 }
 
@@ -118,6 +121,10 @@ table {
 .mainpage {
     background-color: $menu-background1;
     @include bodypage-settings();
+    text-align: center;
+    p{
+        text-align: left;
+    }
 }
 
 .aboutpage {
@@ -128,4 +135,25 @@ table {
 .industrypage {
     background-color: $menu-background3;
     @include bodypage-settings();
+}
+
+.main-content{
+    font-size: $main-font-size;
+}
+
+.designTable{
+    
+    tr {
+        th {
+            background-color: $menu-background1;
+            margin-left: 10px;
+            a {
+                img {
+                    width: 170px;
+                    height: 170px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
 }
