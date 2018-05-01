@@ -1,0 +1,91 @@
+h1 {
+  text-align: center; }
+
+.document {
+  padding-left: 31%; }
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+
+img {
+  height: 13rem; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black; }
+
+li {
+  float: left; }
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1rem 1rem;
+  text-decoration: none; }
+
+li a:hover {
+  background-color: dimgrey; }
+
+.mainSection {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+table {
+  text-align: center; }
+
+.grid-menu {
+  grid-auto-flow: row;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto; }
+  .grid-menu div {
+    text-align: center;
+    padding: 50px;
+    border: black;
+    border-style: solid;
+    color: black; }
+  .grid-menu div:hover {
+    background-color: black;
+    color: white; }
+  .grid-menu .menu-1 {
+    background-color: #0092ff;
+    color: white; }
+    .grid-menu .menu-1 a {
+      color: white;
+      text-decoration: none; }
+  .grid-menu .menu-2 {
+    background-color: #ffc41a;
+    color: white; }
+    .grid-menu .menu-2 a {
+      color: white;
+      text-decoration: none; }
+  .grid-menu .menu-3 {
+    background-color: #75bd3f;
+    color: white; }
+    .grid-menu .menu-3 a {
+      color: white;
+      text-decoration: none; }
+
+.mainpage {
+  background-color: #0092ff;
+  color: white; }
+
+.aboutpage {
+  background-color: #ffc41a;
+  color: white; }
+
+.industrypage {
+  background-color: #75bd3f;
+  color: white; }
+
+/*# sourceMappingURL=new-main.css.map */

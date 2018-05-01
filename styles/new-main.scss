@@ -1,0 +1,125 @@
+//colors variables
+$main-background:black;
+$main-hovercolor:dimgrey;
+$main-textcolor:white;
+$menu-background1:#0092ff;
+$menu-background2:#ffc41a;
+$menu-background3:#75bd3f;
+$menu-background4:#ff7b0f;
+$menu-background5:#ea4335;
+$menu-background6:#7d4297;
+//mixins
+@mixin hoverColorChange() {
+    background-color: $main-background;
+    color: $main-textcolor;
+}
+
+@mixin a-href-settings() {
+    a {
+        color: $main-textcolor;
+        text-decoration: none;
+    }
+}
+
+@mixin bodypage-settings() {
+    color: $main-textcolor;
+}
+
+//main styles settings
+h1 {
+    text-align: center;
+}
+
+.document {
+    padding-left: 31%;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+img {
+    height: 13rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $main-background;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: $main-textcolor;
+    text-align: center;
+    padding: 1rem 1rem;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: $main-hovercolor;
+}
+
+.mainSection {
+    text-align: center;
+    align-items: center;
+}
+
+table {
+    text-align: center;
+}
+
+.grid-menu {
+    grid-auto-flow: row;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    div {
+        text-align: center;
+        padding: 50px;
+        border: $main-background;
+        border-style: solid;
+        color: $main-background;
+    }
+    div:hover {
+        @include hoverColorChange();
+    }
+    //nesting
+    .menu-1 {
+        background-color: $menu-background1;
+        color: $main-textcolor;
+        @include a-href-settings();
+    }
+    .menu-2 {
+        background-color: $menu-background2;
+        color: $main-textcolor;
+        @include a-href-settings();
+    }
+    .menu-3 {
+        background-color: $menu-background3;
+        color: $main-textcolor;
+        @include a-href-settings();
+    }
+}
+
+.mainpage {
+    background-color: $menu-background1;
+    @include bodypage-settings();
+}
+
+.aboutpage {
+    background-color: $menu-background2;
+    @include bodypage-settings();
+}
+
+.industrypage {
+    background-color: $menu-background3;
+    @include bodypage-settings();
+}
