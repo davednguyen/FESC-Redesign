@@ -77,6 +77,26 @@ table {
     .grid-menu .menu-3 a {
       color: white;
       text-decoration: none; }
+  .grid-menu .menu-4 {
+    background-color: #ff7b0f;
+    color: white; }
+    .grid-menu .menu-4 a {
+      color: white;
+      text-decoration: none; }
+  .grid-menu .menu-5 {
+    background-color: #ea4335;
+    color: white; }
+    .grid-menu .menu-5 a {
+      color: white;
+      text-decoration: none; }
+  .grid-menu .menu-6 {
+    background-color: #7d4297;
+    color: white; }
+    .grid-menu .menu-6 a {
+      color: white;
+      text-decoration: none; }
+  .grid-menu .menu-item {
+    width: auto; }
 
 .mainpage {
   background-color: #0092ff;
@@ -103,5 +123,17 @@ table {
     width: 170px;
     height: 170px;
     margin-left: 10px; }
+
+.container div div iframe {
+  padding-top: 1rem; }
+.container div div h1 {
+  padding-top: 4rem; }
+.container div div h2 {
+  padding-top: 1rem; }
+.container div div div img {
+  padding-top: 1rem;
+  padding-left: .5rem;
+  width: 270px;
+  height: 250px; }
 
 /*# sourceMappingURL=new-main.css.map */

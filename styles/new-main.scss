@@ -116,6 +116,24 @@ table {
         color: $main-textcolor;
         @include a-href-settings();
     }
+    .menu-4 {
+        background-color: $menu-background4;
+        color: $main-textcolor;
+        @include a-href-settings();
+    }
+    .menu-5 {
+        background-color: $menu-background5;
+        color: $main-textcolor;
+        @include a-href-settings();
+    }
+    .menu-6 {
+        background-color: $menu-background6;
+        color: $main-textcolor;
+        @include a-href-settings();
+    }
+    .menu-item{
+        width: auto;
+    }    
 }
 
 .mainpage {
@@ -152,6 +170,30 @@ table {
                     width: 170px;
                     height: 170px;
                     margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.container{
+    div {
+        div {
+            iframe{
+                padding-top: 1rem;
+            }
+            h1{
+                padding-top: 4rem;
+            }
+            h2 {
+                padding-top: 1rem;
+            }
+            div{
+                img {
+                    padding-top: 1rem;
+                    padding-left: .5rem;
+                    width: 270px;
+                    height: 250px;
                 }
             }
         }
