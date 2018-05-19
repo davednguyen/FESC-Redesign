@@ -26,30 +26,40 @@ ul {
   background-color: black; }
 
 li {
-  float: left; }
+  float: left;
+  width: 9.5rem;
+  height: 6rem;
+  text-decoration: none; }
 
 li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 1rem 1rem;
-  text-decoration: none; }
+  text-decoration: none;
+  padding: 2rem;
+  height: 6rem; }
 
 li a:hover {
-  background-color: dimgrey; }
+  background-color: dimgrey;
+  text-decoration: none; }
 
 .mainSection {
   text-align: center;
   align-items: center; }
-
-table {
-  text-align: center; }
+  .mainSection table {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    background-color: #ea4335; }
 
 .grid-menu {
   grid-auto-flow: row;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto; }
+  .grid-menu a {
+    text-decoration: none;
+    font-size: 3rem; }
   .grid-menu div {
     text-align: center;
     padding: 50px;
@@ -96,7 +106,9 @@ table {
       color: white;
       text-decoration: none; }
   .grid-menu .menu-item {
-    width: auto; }
+    width: 23.1rem;
+    height: 17rem;
+    text-decoration: none; }
 
 .mainpage {
   background-color: #0092ff;
@@ -135,5 +147,8 @@ table {
   padding-left: .5rem;
   width: 270px;
   height: 250px; }
+
+.designpage {
+  background-color: #ea4335; }
 
 /*# sourceMappingURL=new-main.css.map */

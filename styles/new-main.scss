@@ -62,34 +62,48 @@ ul {
 
 li {
     float: left;
+    width: 9.5rem;
+    height: 6rem;
+    text-decoration: none;
 }
 
 li a {
     display: block;
     color: $main-textcolor;
     text-align: center;
-    padding: 1rem 1rem;
     text-decoration: none;
+    padding: 2rem;
+    height: 6rem;
 }
 
 li a:hover {
     background-color: $main-hovercolor;
+    text-decoration: none;
 }
 
 .mainSection {
     text-align: center;
     align-items: center;
+    table {
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        background-color: $menu-background5;
+    }
 }
 
-table {
-    text-align: center;
-}
+
 
 .grid-menu {
     grid-auto-flow:row;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto;
+    a {
+        text-decoration: none;
+        font-size: 3rem
+    }
+    
     div {
         text-align: center;
         padding: 50px;
@@ -132,7 +146,9 @@ table {
         @include a-href-settings();
     }
     .menu-item{
-        width: auto;
+        width: 23.1rem;
+        height: 17rem;
+        text-decoration: none;
     }    
 }
 
@@ -198,4 +214,8 @@ table {
             }
         }
     }
+}
+
+.designpage{
+    background-color: $menu-background5;
 }

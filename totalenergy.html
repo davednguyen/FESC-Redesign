@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electricity total consumption (i.e. sold) Florida</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/new-main.css">
+    <meta property="og:url" content="https://davednguyen.github.io/FESC-Redesign/index.html" />
+    <meta property="og:type" content="" />
+    <meta property="og:title" content="FESC" />
+    <meta property="og:description" content="FESC Bringing Energy Solutions to Florida" />
+    <meta property="og:image" content="https://davednguyen.github.io/FESC-Redesign/images/header_logo.png" />
+    <meta name="twitter:title" content="FESC">
+    <meta name="twitter:description" content="FESC Bringing Energy Solutions to Florida">
+    <meta name="twitter:image" content="https://davednguyen.github.io/FESC-Redesign/images/header_logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <script>
+        window.twttr = (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.twttr || {};
+            if (d.getElementById(id)) return t;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+            t._e = [];
+            t.ready = function(f) {
+                t._e.push(f);
+            };
+            return t;
+        }(document, "script", "twitter-wjs"));
+    </script>
+    <script src="scripts/main.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      //google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+            ["Year", "Btu in Billion"],
+            ["2016", 804283],
+            ["2015",803865],
+            ["2014",771379],
+            ["2013",757189],
+            ["2012",752941],
+            ["2011",768009],
+            ["2010",788887],
+            ["2009",766848],
+            ["2008",771702],
+            ["2007",788461],
+            ["2006",778685],
+            ["2005",767622],
+            ["2004",745810],
+            ["2003",741696],
+            ["2002",718136],
+            ["2001",684966],
+            ["2000",668216],
+            ["1999",638966],
+            ["1998",639254],
+            ["1997",597240],
+            ["1996",586291],
+            ["1995",571483],
+            ["1994",544365],
+            ["1993",521176],
+            ["1992",501598],
+            ["1991",499299],
+            ["1990",489741],
+            ["1989",472473],
+            ["1988",444382],
+            ["1987",417862],
+            ["1986",398095],
+            ["1985",379307],
+            ["1984",353246],
+            ["1983",329216],
+            ["1982",315744],
+            ["1981",317921],
+            ["1980",309694],
+            ["1979",295551],
+            ["1978",289031],
+            ["1977",270767],
+            ["1976",252408],
+            ["1975",242096],
+            ["1974",235482],
+            ["1973",237104],
+            ["1972",209665],
+            ["1971",188564],
+            ["1970",171346],
+            ["1969",153032],
+            ["1968",135509],
+            ["1967",119314],
+            ["1966",108610],
+            ["1965",95878],
+            ["1964",87016],
+            ["1963",78258],
+            ["1962",71216],
+            ["1961",62705],
+            ["1960",57344]
+        ]);
+
+        var options = {
+          width: 1100,
+          legend: { position: 'none' },
+          chart: {
+            title: 'Electricity total consumption',
+            subtitle: '(i.e. sold) Florida' },
+          axes: {
+            x: {
+              0: { side: 'bottom', label: 'White to move'} // Top x-axis.
+            }
+          },
+          //adjusted options
+          bar: { groupWidth: "15%", style:"red" },
+          //additional options
+          bar:[{color:'#8AD1C2'},
+              {color:'#9F8AD1'},
+              {color:'#D18A99'},
+              {color:'#BCD18A'}]
+        };
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      };
+    </script>
+</head>
+<body class="container">
+        <ul>
+                <li><a href="index.html">Main</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="fl-energy-industry.html">Energy Industry</a></li>
+                <li><a href="proposal.html">Redesign Proposal</a></li>
+                <li><a href="design.html">Design ideas</a></li>
+                <li><a class="active" href="#">Feasibility Review</a></li>
+        </ul>
+    <section class="mainSection">
+            <div id="top_x_div" style="width: 100%; height: 600px;"></div>
+    </section>
+    <footer>
+        <p>Copyright © 2008-2015 Florida Energy Systems Consortium.</p>   
+        <a class="twitter-share-button" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdavednguyen.github.io%2FFESC-Redesign%2Findex.html"> Tweet</a>
+        <div class="fb-share-button" data-href="https://davednguyen.github.io/FESC-Redesign/index.html" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdavednguyen.github.io%2FFESC-Redesign%2Findex.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+    </footer>
+</body>
+</html>
