@@ -55,65 +55,55 @@ li a:hover {
     width: 100%;
     background-color: #ea4335; }
 
-.grid-menu {
-  grid-auto-flow: row;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto; }
-  .grid-menu a {
-    text-decoration: none;
-    font-size: 3rem; }
-    .grid-menu a img {
-      width: 30px;
-      height: 30px; }
-  .grid-menu div {
-    text-align: center;
-    padding: 50px;
-    border: black;
-    border-style: solid;
-    color: black; }
-  .grid-menu div:hover {
-    background-color: black;
-    color: white; }
-  .grid-menu .menu-1 {
-    background-color: #0092ff;
-    color: white; }
-    .grid-menu .menu-1 a {
-      color: white;
-      text-decoration: none; }
-  .grid-menu .menu-2 {
-    background-color: #ffc41a;
-    color: white; }
-    .grid-menu .menu-2 a {
-      color: white;
-      text-decoration: none; }
-  .grid-menu .menu-3 {
-    background-color: #75bd3f;
-    color: white; }
-    .grid-menu .menu-3 a {
-      color: white;
-      text-decoration: none; }
-  .grid-menu .menu-4 {
-    background-color: #ff7b0f;
-    color: white; }
-    .grid-menu .menu-4 a {
-      color: white;
-      text-decoration: none; }
-  .grid-menu .menu-5 {
-    background-color: #ea4335;
-    color: white; }
-    .grid-menu .menu-5 a {
-      color: white;
-      text-decoration: none; }
-  .grid-menu .menu-6 {
-    background-color: #7d4297;
-    color: white; }
-    .grid-menu .menu-6 a {
-      color: white;
-      text-decoration: none; }
-  .grid-menu .menu-item {
-    width: 23.1rem;
-    height: 17rem;
+.grid-menu div {
+  text-align: center;
+  text-align: center;
+  color: white;
+  height: 20rem;
+  text-decoration: none;
+  font-size: 3rem;
+  padding: 1rem; }
+  .grid-menu div img {
+    width: 20px;
+    width: 20px; }
+.grid-menu div:hover {
+  background-color: black;
+  color: white; }
+.grid-menu .menu-1 {
+  background-color: #0092ff;
+  color: white; }
+  .grid-menu .menu-1 a {
+    color: white;
+    text-decoration: none; }
+.grid-menu .menu-2 {
+  background-color: #ffc41a;
+  color: white; }
+  .grid-menu .menu-2 a {
+    color: white;
+    text-decoration: none; }
+.grid-menu .menu-3 {
+  background-color: #75bd3f;
+  color: white; }
+  .grid-menu .menu-3 a {
+    color: white;
+    text-decoration: none; }
+.grid-menu .menu-4 {
+  background-color: #ff7b0f;
+  color: white; }
+  .grid-menu .menu-4 a {
+    color: white;
+    text-decoration: none; }
+.grid-menu .menu-5 {
+  background-color: #ea4335;
+  color: white; }
+  .grid-menu .menu-5 a {
+    color: white;
+    text-decoration: none; }
+.grid-menu .menu-6 {
+  background-color: #7d4297;
+  color: white; }
+  .grid-menu .menu-6 a {
+    color: white;
     text-decoration: none; }
 
 .mainpage {
@@ -167,6 +157,9 @@ li a:hover {
   padding-left: .5rem;
   width: 270px;
   height: 250px; }
+.container div div div .icon {
+  width: 5rem;
+  height: 5rem; }
 
 .designpage {
   background-color: #ea4335; }
