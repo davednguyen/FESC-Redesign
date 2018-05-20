@@ -84,6 +84,9 @@ li a:hover {
 .mainSection {
     text-align: center;
     align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
     table {
         text-align: center;
         align-items: center;
@@ -164,6 +167,25 @@ li a:hover {
         text-align: left;
     }
 }
+
+.totalenergypage {
+    background-color: $menu-background6;
+    @include bodypage-settings();
+    text-align: center;
+    p{
+        text-align: left;
+    }
+}
+
+.renewalenergypage {
+    background-color: $menu-background4;
+    @include bodypage-settings();
+    text-align: center;
+    p{
+        text-align: left;
+    }
+}
+
 
 .aboutpage {
     background-color: $menu-background2;
