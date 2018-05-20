@@ -60,12 +60,12 @@ ul {
     background-color: $main-background;
 }
 
-li {
-    float: left;
-    width: 9.5rem;
-    height: 6rem;
-    text-decoration: none;
-}
+    li {
+        float: left;
+        width: 9.5rem;
+        height: 6rem;
+        text-decoration: none;
+    }
 
 li a {
     display: block;
@@ -73,7 +73,6 @@ li a {
     text-align: center;
     text-decoration: none;
     padding: 2rem;
-    //height: 5rem;
 }
 
 li a:hover {
