@@ -60,6 +60,9 @@ li a:hover {
   .grid-menu a {
     text-decoration: none;
     font-size: 3rem; }
+    .grid-menu a img {
+      width: 30px;
+      height: 30px; }
   .grid-menu div {
     text-align: center;
     padding: 50px;
