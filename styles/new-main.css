@@ -157,6 +157,9 @@ li a:hover {
   width: 5rem;
   height: 5rem; }
 
+.container {
+  padding-bottom: 1rem; }
+
 .designpage {
   background-color: #ea4335; }
 
