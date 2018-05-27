@@ -3,6 +3,7 @@
 <head>
     <title>FESC</title>
     <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/new-main.css">
     <meta property="og:url" content="https://davednguyen.github.io/FESC-Redesign/index.html" />
@@ -44,35 +45,23 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <div class="container">
-     <div class="row grid-menu">
-            <div class="col-sm menu-1">
-                <a href="home.html"><div class="menu-item">Home</div></a>
-            </div>
-        <div class="col-sm menu-2">
-            <a href="about.html"><div class="menu-item">About Us</div></a>            
+    <div id="app" class="container">
+        <div class="row grid-menu">
+                <div v-for="tiles1 in toptile" :class="tiles1.class">
+                    <a :href="tiles1.href"><div class="menu-item">{{ tiles1.name }}</div></a>
+                </div>
         </div>
-        <div class="col-sm menu-3">
-            <a href="fl-energy-industry.html"><div class="menu-item">Energy Industry</div></a>
+        <div class="row grid-menu">
+                <div v-for="tiles2 in bottomtile" :class="tiles2.class">          
+                    <a :href="tiles2.href"><div class="menu-item">Renewable energyn <img class="icon" :src="tiles2.src"></div></a>
+                </div> 
         </div>
-    </div>
-    <div class="row grid-menu">
-            <div class="col-sm menu-6">
-        <a href="totalenergy.html"><div class="menu-item">Total Consumption<img class="icon" src="images/charticon.png"></div></a>          
-    </div>
-        <div class="col-sm menu-5">
-        <a href="design.html"><div class="menu-item">Design ideas</div></a>  
-    </div>
-        <div class="col-sm menu-4">          
-        <a href="renewenergy.html"><div class="menu-item">Renewable energyn                  <img class="icon" src="images/charticon.png"></div></a>
-    </div>
-    </div>
     <footer>
             <p>Copyright © 2008-2015 Florida Energy Systems Consortium.</p>   
            <a class="twitter-share-button" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdavednguyen.github.io%2FFESC-Redesign%2Findex.html"> Tweet</a>
            <div class="fb-share-button" data-href="https://davednguyen.github.io/FESC-Redesign/index.html" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdavednguyen.github.io%2FFESC-Redesign%2Findex.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
     </footer>
-    </div>      
-  
-</body>
+    </div>
+    <script src="scripts/index.js"></script>     
+  </body>
 </html>
