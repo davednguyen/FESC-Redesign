@@ -25,7 +25,17 @@ var totalEngergyButton = new Vue({
             }
         },
         displayAll:function(){
-           
+            var displayInfoTable = document.getElementById("tableChart").style.display;
+            var displayInfo = document.getElementById("renewalenergypage").style.display;
+            if(displayInfoTable === "inline" && displayInfo === "inline"){
+                document.getElementById("renewalenergypage").style.display = "none";
+                document.getElementById("tableChart").style.display = "none";
+                document.getElementById("displayAllButton").innerHTML = "Show all charts";
+            }else{
+                document.getElementById("renewalenergypage").style.display = "inline";
+                document.getElementById("tableChart").style.display = "inline";
+                document.getElementById("displayAllButton").innerHTML = "Hide all charts";
+            }            
         }
     }
 });
