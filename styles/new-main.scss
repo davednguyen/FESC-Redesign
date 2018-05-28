@@ -238,6 +238,20 @@ li a:hover {
     background-color: $menu-background5;
 }
 
+#totalenergypage{
+    display:inline  ;
+}
+
+#totalChartSection {
+    div{
+        div{
+            position: relative;
+            svg {
+                height: 600px;
+            }
+        }
+    }
+}
 #app{
     .mainImage{
         text-align: center;

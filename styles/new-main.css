@@ -163,6 +163,14 @@ li a:hover {
 .designpage {
   background-color: #ea4335; }
 
+#totalenergypage {
+  display: inline; }
+
+#totalChartSection div div {
+  position: relative; }
+  #totalChartSection div div svg {
+    height: 600px; }
+
 #app .mainImage {
   text-align: center; }
 
