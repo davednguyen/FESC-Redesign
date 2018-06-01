@@ -22,7 +22,7 @@ var tiles2 = [
      href:"design.html",
      src:null,
      class:'col-sm menu-5'},
-    {name:"Renewable energyn",
+    {name:"Renewable energy",
      href:"renewenergy.html",
      src:"images/charticon.png",
      class:'col-sm menu-6'}
