@@ -16,148 +16,61 @@
     <meta name="twitter:card" content="summary_large_image">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
+      //new data to get from EIA API
+      function getData()
+        {
+            console.log("reached the function");
+            // Create a new request object
+            let request = new XMLHttpRequest()     
+            //**********homework 10*****************************
+            //Documentation for the "FL Renewable Energy Production" endpoint is here:
+            let requestUrl ="http://api.eia.gov/series/?api_key=3f166358025607d0b027843ee391b318&series_id=SEDS.REPRB.FL.A"
+            // Open a connection
+            request.open('GET', requestUrl, true)
+            // Callback for when the request completes
+            request.onload = function(){
+            console.log("Raw respones: ", request.response)
+            console.log("response from server is: ", JSON.parse(request.response))
+            testData = JSON.parse(request.response);
+            console.log(testData.series[0].data)
+            let fresdb = testData.series[0].data;            ;            
+            drawChart(fresdb);
+            let datatable = fresdb;
+            datatable.shift();
+            drawTable(datatable);
+            // Callback for when there's an error
+            request.error = function(err)
+            {
+            console.log("error is: ", err)
+            }
+            }
+            // Send the request to the specified URL
+            request.send()           
+        }    
+    </script>    
+    <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-            ['Year','BTU'],
-            ['2015',234192],
-            ['2014',226863],
-            ['2013',229666],
-            ['2012',220020],
-            ['2011',222956],
-            ['2010',223518],
-            ['2009',213642],
-            ['2008',195232],
-            ['2007',190489],
-            ['2006',185564],
-            ['2005',183175],
-            ['2004',179462],
-            ['2003',188473],
-            ['2002',174327],
-            ['2001',158038],
-            ['2000',194952],
-            ['1999',204114],
-            ['1998',205485],
-            ['1997',231308],
-            ['1996',240343],
-            ['1995',220211],
-            ['1994',215563],
-            ['1993',217028],
-            ['1992',230779],
-            ['1991',212955],
-            ['1990',198986],
-            ['1989',232261],
-            ['1988',113802],
-            ['1987',107606],
-            ['1986',116356],
-            ['1985',110698],
-            ['1984',108740],
-            ['1983',91705],
-            ['1982',104674],
-            ['1981',83117],
-            ['1980',90049],
-            ['1979',69419],
-            ['1978',65357],
-            ['1977',59953],
-            ['1976',56507],
-            ['1975',50007],
-            ['1974',52429],
-            ['1973',56250],
-            ['1972',54389],
-            ['1971',49968],
-            ['1970',51035],
-            ['1969',51489],
-            ['1968',49556],
-            ['1967',44550],
-            ['1966',42760],
-            ['1965',39916],
-            ['1964',39016],
-            ['1963',38613],
-            ['1962',35826],
-            ['1961',34417],
-            ['1960',35680]
-        ]);
-
-         var options = {
+      google.charts.setOnLoadCallback(getData);
+      function drawChart(renewalenergyData) {
+        renewalenergyData.unshift(['Year','BTU']);
+        var data = google.visualization.arrayToDataTable(renewalenergyData);
+        var options = {
           title: 'Years, in BTU',
           legend: { position: 'none' },
         };
-
         var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
         chart.draw(data, options);
-      }
-    </script>
+       }     
+     </script>
      <script type="text/javascript">
         google.charts.load('current', {'packages':['table']});
-        google.charts.setOnLoadCallback(drawTable);
-  
-        function drawTable() {
+        google.charts.setOnLoadCallback(getData);  
+        function drawTable(renewalenergyData) {         
           var data = new google.visualization.DataTable();
           data.addColumn('string', 'year');
           data.addColumn('number', 'BTU');
-          data.addRows([
-          ['2015',234192],
-            ['2014',226863],
-            ['2013',229666],
-            ['2012',220020],
-            ['2011',222956],
-            ['2010',223518],
-            ['2009',213642],
-            ['2008',195232],
-            ['2007',190489],
-            ['2006',185564],
-            ['2005',183175],
-            ['2004',179462],
-            ['2003',188473],
-            ['2002',174327],
-            ['2001',158038],
-            ['2000',194952],
-            ['1999',204114],
-            ['1998',205485],
-            ['1997',231308],
-            ['1996',240343],
-            ['1995',220211],
-            ['1994',215563],
-            ['1993',217028],
-            ['1992',230779],
-            ['1991',212955],
-            ['1990',198986],
-            ['1989',232261],
-            ['1988',113802],
-            ['1987',107606],
-            ['1986',116356],
-            ['1985',110698],
-            ['1984',108740],
-            ['1983',91705],
-            ['1982',104674],
-            ['1981',83117],
-            ['1980',90049],
-            ['1979',69419],
-            ['1978',65357],
-            ['1977',59953],
-            ['1976',56507],
-            ['1975',50007],
-            ['1974',52429],
-            ['1973',56250],
-            ['1972',54389],
-            ['1971',49968],
-            ['1970',51035],
-            ['1969',51489],
-            ['1968',49556],
-            ['1967',44550],
-            ['1966',42760],
-            ['1965',39916],
-            ['1964',39016],
-            ['1963',38613],
-            ['1962',35826],
-            ['1961',34417],
-            ['1960',35680]
-          ]);
-  
-          var table = new google.visualization.Table(document.getElementById('table_div'));
-  
+          data.addRows(renewalenergyData);  
+          var table = new google.visualization.Table(document.getElementById('table_div'));  
           table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
         }
   </script>
